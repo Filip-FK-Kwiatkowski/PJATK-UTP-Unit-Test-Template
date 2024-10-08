@@ -4,8 +4,29 @@ import java.util.Objects;
 public class TrackingSet<T> {
     private HashSet<T> innerSet = new HashSet<>();
 
-    public void add(T item) { innerSet.add(item); }
-    public void remove(T item) { innerSet.remove(item); }
+    private int additionsCount = 0;
+    private int removalsCount = 0;
+
+    public void add(T item) {
+        innerSet.add(item);
+        additionsCount += 1;
+    }
+    public void remove(T item) {
+        innerSet.remove(item);
+        removalsCount += 1;
+    }
+
+    public int getOperationsCount() {
+        return getAdditionsCount() + getRemovalsCount();
+    }
+
+    public int getAdditionsCount() {
+        return additionsCount;
+    }
+
+    public int getRemovalsCount() {
+        return removalsCount;
+    }
 
     @Override
     public String toString() {
