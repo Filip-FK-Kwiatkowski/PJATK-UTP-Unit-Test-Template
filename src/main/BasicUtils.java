@@ -1,3 +1,5 @@
+package main;
+
 public class BasicUtils {
     public static String reverse(String str) {
         return new StringBuilder(str).reverse().toString();
