@@ -13,6 +13,6 @@ public class BasicUtils {
     }
 
     private static boolean isVowel(char c) {
-        return "aeio".indexOf(c) != -1;
+        return "aeio".contains(String.valueOf(c));
     }
 }
