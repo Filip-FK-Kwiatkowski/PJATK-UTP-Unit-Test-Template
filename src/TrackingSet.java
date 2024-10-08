@@ -2,7 +2,7 @@ import java.util.HashSet;
 import java.util.Objects;
 
 public class TrackingSet<T> {
-    private HashSet<T> innerSet = new HashSet<>();
+    private final HashSet<T> innerSet = new HashSet<>();
 
     private int additionsCount = 0;
     private int removalsCount = 0;
