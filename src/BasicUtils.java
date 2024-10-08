@@ -12,7 +12,7 @@ public class BasicUtils {
         return (int) count;
     }
 
-    private static boolean isVowel(char c) {
+    public static boolean isVowel(char c) {
         return "aeio".contains(String.valueOf(c));
     }
 }
