@@ -11,6 +11,7 @@ public class TrackingSet<T> {
         innerSet.add(item);
         additionsCount += 1;
     }
+
     public void remove(T item) {
         innerSet.remove(item);
         removalsCount += 1;
